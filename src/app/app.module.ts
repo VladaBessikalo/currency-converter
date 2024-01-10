@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { ConverterComponent } from './converter/converter.component';
-import { ResultComponent } from './result/result.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ReactiveFormsModule } from '@angular/forms';
 import { DecimalPipe } from '@angular/common';
@@ -14,8 +13,7 @@ import { DecimalPipe } from '@angular/common';
   declarations: [
     AppComponent,
     HeaderComponent,
-    ConverterComponent,
-    ResultComponent,
+    ConverterComponent
   ],
   imports: [
     BrowserModule,
