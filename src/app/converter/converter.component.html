@@ -1,0 +1,39 @@
+<div class="converter container">
+    <form [formGroup]="converterForm" class="converter__form row align-items-end gy-3 justify-content-center">
+        <div class="converter__currency col-sm form-group row justify-content-center">
+            <div class="converter__row row justify-content-center">
+                <label class="converter__label text-center" for="first-currency">From:</label>
+            </div>
+            <div class="converter__input-group input-group text-center">
+                <input type="number" class="converter__input form-control" id="first-currency" formControlName="value1">
+                <select formControlName="currency1" class="converter__select form-select">
+                    <option value="UAH">UAH</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="PLN">PLN</option>
+                </select>
+            </div>  
+        </div>
+        <div class="converter__button col-sm-2 text-center">
+            <button class="btn btn-light" type="button" (click)="switchCurrencies()">
+                <svg width="16" height="16" fill="currentColor" class="bi bi-arrow-left-right" viewBox="0 0 16 16">
+                    <path fill-rule="evenodd" d="M1 11.5a.5.5 0 0 0 .5.5h11.793l-3.147 3.146a.5.5 0 0 0 .708.708l4-4a.5.5 0 0 0 0-.708l-4-4a.5.5 0 0 0-.708.708L13.293 11H1.5a.5.5 0 0 0-.5.5m14-7a.5.5 0 0 1-.5.5H2.707l3.147 3.146a.5.5 0 1 1-.708.708l-4-4a.5.5 0 0 1 0-.708l4-4a.5.5 0 1 1 .708.708L2.707 4H14.5a.5.5 0 0 1 .5.5"/>
+                </svg>
+            </button>
+        </div>
+        <div class="converter__currency col-sm form-group row justify-content-center">
+            <div class="converter__row row justify-content-center">
+                <label for="second-currency" class="converter__label text-center">To:</label>
+            </div>
+            <div class="converter__input-group input-group">
+                <input type="number" class="converter__input form-control" id="second-currency" formControlName="value2"> 
+                <select formControlName="currency2" class="converter__select form-select">
+                    <option value="UAH">UAH</option>
+                    <option value="USD">USD</option>
+                    <option value="EUR">EUR</option>
+                    <option value="PLN">PLN</option>
+                </select>
+            </div>
+        </div>
+    </form>
+</div>            
