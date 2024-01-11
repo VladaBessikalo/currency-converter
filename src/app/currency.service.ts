@@ -9,7 +9,6 @@ export class CurrencyService {
   private apiUrl = 'https://v6.exchangerate-api.com/v6/97da04be80dfd338c9707a47/latest/UAH';
   private commonApi = 'https://v6.exchangerate-api.com/v6/97da04be80dfd338c9707a47/latest/';
 
-
   constructor(private http: HttpClient) { }
 
   getExchangeRates(): Observable<any> {
@@ -20,5 +19,4 @@ export class CurrencyService {
     const api = `${this.commonApi}${baseCurrency}`;
     return this.http.get(api);
   }
-
 }
